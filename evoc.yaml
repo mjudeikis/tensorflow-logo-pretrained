@@ -1,0 +1,13 @@
+---
+evoc:
+  functions:
+  - name: logo-ml
+    base_img: mangirdas/tensorflow-logo
+    command: python
+    executor: docker
+    cache: true
+  triggers:
+  - type: http-request
+    method: post
+    path: "/logo-ml"
+    function: logo-ml
